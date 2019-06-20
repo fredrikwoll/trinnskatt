@@ -1,23 +1,10 @@
 import React, { Component } from "react";
-/*
-Trinnskatten for personlige skattytere beregnes i den enkeltes persons lønnsinntekt og 
-tilsvarende inntekter som erstatter lønnsinntekt, f.eks. sykepenger, arbeidsavklaringspenger, 
-uføretrygd og pensjon. Trinnskatten består av fire trinn. For de første 174 500 kroner av 
-personinntekten din skal du ikke betale trinnskatt.
-
-Inntekten mellom 0 - 174 500 kroner	Ingen trinnskatt
-
-Trinn 1	    Inntekten mellom    174 500 – 245 650 kroner	1,9 % trinnskatt
-Trinn 2	    Inntekten mellom    245 650 – 617 500 kroner	4,2 %  trinnskatt
-Trinn 3	    Inntekten mellom    617 500 – 964 800 kroner	13,2 % trinnskatt *
-Trinn 4	    Inntekten over      964 800 kroner	            16,2 % trinnskatt
-* bosatte i Finnmark og Nord-Troms 11,2 %
-*/
 
 class Calculator extends Component {
   state = {
     salary: 0,
-    tax: 0
+    tax: 0,
+    lang: "no"
   };
   constructor() {
     super();
@@ -33,6 +20,10 @@ class Calculator extends Component {
     event.preventDefault();
     const tax = Math.round(this.calculateTax(this.state.salary));
     this.setState({ tax: tax });
+  }
+  handleLangSwitch(lang) {
+    this.setState({ lang: lang });
+    console.log(lang);
   }
 
   calculateTax(salary) {
@@ -64,14 +55,29 @@ class Calculator extends Component {
   }
 
   render() {
-    const { tax } = this.state;
+    const { tax, lang } = this.state;
 
     return (
       <div className="form">
-        <h1>Trinn skatt</h1>
+        <div className="lang">
+          <button
+            className="button-lang"
+            onClick={() => this.handleLangSwitch("no")}
+          >
+            NO
+          </button>{" "}
+          |{" "}
+          <button
+            className="button-lang"
+            onClick={() => this.handleLangSwitch("en")}
+          >
+            EN
+          </button>
+        </div>
+        <h1>{lang === "no" ? `Trinn skatt` : `Bracket Tax`}</h1>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="salary" className="hoved">
-            Årslønn
+            {lang === "no" ? `Årslønn` : `Gross salary`}
           </label>
           <input
             type="number"
@@ -79,9 +85,14 @@ class Calculator extends Component {
             className="input"
             onChange={this.handleChange}
           />
-          <button className="button is-small">Beregn trinnskatt</button>
+          <button className="button is-small">
+            {lang === "no" ? `Beregn trinnskatt` : `Calculate bracket tax`}
+          </button>
         </form>
-        <p>Din trinnskatt: kr {tax},-</p>
+        <p>
+          {lang === "no" ? `Din trinnskatt: kr` : `Your bracket tax: NOK`} {tax}
+          ,-
+        </p>
       </div>
     );
   }

@@ -70,9 +70,27 @@ label.hoved {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
     -webkit-box-shadow 0.15s ease-in-out;
 }
+button:focus {
+  outline: 0;
+}
 
 .button.is-small {
   font-size: 17px;
   padding: 8px 14px;
   border-width: 2px;
+}
+.button-lang {
+  border: none;
+  font-size: 15px;
+  padding-top: 10px;
+  font-weight: 500;
+}
+.button-lang:active {
+  border: none;
+  outline: none;
+}
+.button-lang:hover {
+  text-decoration: underline;
+  color: #0f68a3;
+  border: none;
 }
