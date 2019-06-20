@@ -1,5 +1,6 @@
 {
   "name": "trinnskatt",
+  "homepage": "https://dev.fredrikwoll.com/trinnskatt/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
