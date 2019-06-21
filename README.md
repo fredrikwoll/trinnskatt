@@ -10,8 +10,15 @@ Step 2 Income between NOK NOK 245,650 – 617,500 4.2% bracket tax
 Step 3 Income between NOK 617,500 – 964,800 13.2% bracket tax*
 Step 4 Income over NOK 964,800 16.2% bracket tax
 *residents of Finnmark and Nord-Troms 11.2%
+Source: https://www.skatteetaten.no/en/rates/bracket-tax/
+
+### Information
+This was something I needed to get out of my head after attending a tech interview where I wasn't able to complete it.
+So I did it afterwards for myself. There is nothing special about this, just me playing around pretty much.
 
 Live demo: https://dev.fredrikwoll.com/trinnskatt/
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
