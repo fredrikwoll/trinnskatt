@@ -4,12 +4,12 @@ The bracket tax for personal taxpayers is calculated based on the individual's s
 
 Bracket tax consists of four steps. You will not pay any bracket tax on the first NOK 174,500 of your personal income.
 
-Step 0 Income between NOK 0 - 174,500 No bracket tax 
-Step 1 Income between NOK 174,500 – 245,650 1.9% bracket tax 
-Step 2 Income between NOK NOK 245,650 – 617,500 4.2% bracket tax 
-Step 3 Income between NOK 617,500 – 964,800 13.2% bracket tax* 
-Step 4 Income over NOK 964,800 16.2% bracket tax
-
+Step 0 Income between NOK 0 - 174,500 No bracket tax <br>
+Step 1 Income between NOK 174,500 – 245,650 1.9% bracket tax <br>
+Step 2 Income between NOK NOK 245,650 – 617,500 4.2% bracket tax <br>
+Step 3 Income between NOK 617,500 – 964,800 13.2% bracket tax* <br>
+Step 4 Income over NOK 964,800 16.2% bracket tax<br>
+<br>
 *residents of Finnmark and Nord-Troms 11.2%
 Source: https://www.skatteetaten.no/en/rates/bracket-tax/
 
